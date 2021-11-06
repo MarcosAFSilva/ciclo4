@@ -46,7 +46,7 @@ export const Incluir = () => {
                 });
             };
             
-        })
+        }) 
         .catch(() => {
             console.log("Erro: Sem conexão com a API")
         })
