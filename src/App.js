@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
 import { Home } from './views/Home';
 import { Listar as ListarClientes} from './views/Cliente/Listar/index'
 import { Listar as ListarPedidos } from './views/Pedido/Listar/index'
@@ -16,6 +15,7 @@ import { Excluir as ExcluirPedidos } from './views/Pedido/Excluir/index'
 import { Excluir as ExcluirServicos } from './views/Servico/Excluir/index'
 
 import { Menu } from './components/Menu';
+import { Item } from './views/Servico/Item'
 
 function App() {
   return (
@@ -36,6 +36,7 @@ function App() {
           <Route path="/excluir-clientes" component={ExcluirClientes}/>
           <Route path="/excluir-pedidos" component={ExcluirPedidos}/>
           <Route path="/excluir-servicos" component={ExcluirServicos}/>
+          <Route path="/listar-pedido/:id" component={Item}/>
         </Switch>
       </Router>
     </div>

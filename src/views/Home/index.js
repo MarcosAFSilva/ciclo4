@@ -8,20 +8,24 @@ export const Home = () => {
                     <div className="m-auto p-2">
                         <h1>Home</h1>
                     </div>
-                </div>
-                <div className="p-2">
-                    <a href="/listar-clientes"
-                        className="btn btn-outline-success btn-sm">
-                        CLIENTES
-                    </a>
-                    <a href="/listar-pedidos"
-                        className="btn btn-outline-success btn-sm">
-                        PEDIDOS
-                    </a>
-                    <a href="/listar-servicos"
-                        className="btn btn-outline-success btn-sm">
-                        SERVIÇOS
-                    </a>
+                    <div className="p-2">
+                        <a href="/listar-clientes"
+                            className="btn btn-outline-success btn-sm">
+                            CLIENTES
+                        </a>
+                    </div>
+                    <div className="p-2">
+                        <a href="/listar-pedidos"
+                            className="btn btn-outline-success btn-sm">
+                            PEDIDOS
+                        </a>
+                    </div>
+                    <div className="p-2">
+                        <a href="/listar-servicos"
+                            className="btn btn-outline-success btn-sm">
+                            SERVIÇOS
+                        </a>
+                    </div>
                 </div>
 
             </Container>
