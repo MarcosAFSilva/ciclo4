@@ -4,9 +4,11 @@ import { Home } from './views/Home';
 import { Listar as ListarClientes} from './views/Cliente/Listar/index'
 import { Listar as ListarPedidos } from './views/Pedido/Listar/index'
 import { Listar as ListarServicos } from './views/Servico/Listar/index'
+import { Listar as ListarProdutos } from './views/Produto/Listar/index'
 import { Incluir as IncluirClientes } from './views/Cliente/Incluir/index'
 import { Incluir as IncluirPedidos } from './views/Pedido/Incluir/index'
 import { Incluir as IncluirServicos } from './views/Servico/Incluir/index'
+import { Incluir as IncluirProdutos } from './views/Produto/Incluir/index'
 import { Editar as EditarClientes } from './views/Cliente/Editar/index'
 import { Editar as EditarPedidos } from './views/Pedido/Editar/index'
 import { Editar as EditarServicos } from './views/Servico/Editar/index'
@@ -30,12 +32,14 @@ function App() {
           <Route path="/incluir-clientes" component={IncluirClientes}/>
           <Route path="/incluir-pedidos" component={IncluirPedidos}/>
           <Route path="/incluir-servicos" component={IncluirServicos}/>
+          <Route path="/incluir-produtos" component={IncluirProdutos}/>
           <Route path="/editar-clientes" component={EditarClientes}/>
           <Route path="/editar-pedidos" component={EditarPedidos}/>
           <Route path="/editar-servicos" component={EditarServicos}/>
           <Route path="/excluir-clientes" component={ExcluirClientes}/>
           <Route path="/excluir-pedidos" component={ExcluirPedidos}/>
           <Route path="/excluir-servicos" component={ExcluirServicos}/>
+          <Route path="/listar-produtos" component={ListarProdutos}/>
           <Route path="/listar-pedido/:id" component={Item}/>
         </Switch>
       </Router>

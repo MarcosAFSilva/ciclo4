@@ -6,14 +6,15 @@ export const Home = () => {
             <Container>
                 <div className="d-flex">
                     <div className="m-auto p-2">
-                        <h1>Home</h1>
+                        <h1>Página Inicial</h1>
                     </div>
                     <div className="p-2">
                         <a href="/listar-clientes"
-                            className="btn btn-outline-success btn-sm">
+                            className="btn btn-primary btn-lg">
                             CLIENTES
                         </a>
                     </div>
+                    <div>
                     <div className="p-2">
                         <a href="/listar-pedidos"
                             className="btn btn-outline-success btn-sm">
@@ -26,8 +27,24 @@ export const Home = () => {
                             SERVIÇOS
                         </a>
                     </div>
-                </div>
+                    </div>
+                    <div>
 
+                    <div className="p-2">
+                        <a href="/listar-compras"
+                            className="btn btn-outline-success btn-sm">
+                            COMPRAS
+                        </a>
+                    </div>
+                    <div className="p-2">
+                        <a href="/listar-produtos"
+                            className="btn btn-outline-success btn-sm">
+                            PRODUTOS
+                        </a>
+                    </div>
+                    </div>
+                   
+                </div>
             </Container>
         </div>
     );

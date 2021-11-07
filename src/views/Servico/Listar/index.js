@@ -39,7 +39,7 @@ export const Listar = () => {
             <Container>
                 <div className="d-flex">
                     <div>
-                        <h1>Visualizar informaçoes do serviço</h1>
+                        <h1>LISTA DE SERVIÇOS</h1>
                     </div>
 
                     <div className="m-auto p-2">

@@ -15,11 +15,11 @@ export const Listar = () => {
         message: '',
     });
 
-    const getPedidos = async () => {
-        await axios.get(api + "/listar-pedidos")
+    const getProdutos = async () => {
+        await axios.get(api + "/listar-produtos")
             .then((response) => {
                 console.log(response.data);
-                setData(response.data.pedido);
+                setData(response.data.produtos);
             })
             .catch(() => {
                 setStatus({
@@ -31,7 +31,7 @@ export const Listar = () => {
     }
 
     useEffect(() => {
-        getPedidos();
+        getProdutos();
     }, []);
 
     return (
@@ -39,12 +39,12 @@ export const Listar = () => {
             <Container>
                 <div className="d-flex">
                     <div>
-                        <h1>Visualizar pedidos</h1>
+                        <h1>LISTA DE PRODUTOS</h1>
                     </div>
 
                     <div className="m-auto p-2">
-                        <Link to="/incluir-pedidos"
-                            className="btn btn-outline-primary btn-sm">CADASTRAR NOVO PEDIDO</Link>
+                        <Link to="/incluir-produtos"
+                            className="btn btn-outline-primary btn-sm">CADASTRAR NOVO PRODUTO</Link>
                     </div>
 
                     {status.type === 'error' ? <Alert color="danger">
@@ -54,19 +54,20 @@ export const Listar = () => {
                 <Table striped>
                     <thead>
                         <tr>
-                            <th>Data</th>
-                            <th>Identificaçao do Cliente</th>
-                            <th>Nome do cliente</th>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Ação</th>
                         </tr>
                     </thead>
                     <tbody>
                         {data.map(item => (
-                            <tr key={item.data}>
+                            <tr key={item.id}>
                                 <td>{item.id}</td>
-                                <td>{item.data}</td>
-                                <td>{item.ClienteId}</td>
+                                <td>{item.nome}</td>
+                                <td>{item.descricao}</td>
                                 <td className="text-center/">
-                                    <Link to={"/listar-servicos/" + item.id}
+                                    <Link to={"/listar-compra/" + item.id}
                                         className="btn btn-outline-primary btn-sm">Consultar</Link>
                                 </td>
                             </tr>
