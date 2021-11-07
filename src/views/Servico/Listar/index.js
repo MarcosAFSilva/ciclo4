@@ -44,7 +44,7 @@ export const Listar = () => {
 
                     <div className="m-auto p-2">
                         <Link to="/incluir-servicos"
-                            className="btn btn-outline-primary btn-sm">CADASTRAR</Link>
+                            className="btn btn-outline-primary btn-sm">CADASTRAR NOVO SERVIÇO</Link>
                     </div>
 
                     {status.type === 'error' ? <Alert color="danger">

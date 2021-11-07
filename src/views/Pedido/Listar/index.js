@@ -19,7 +19,7 @@ export const Listar = () => {
         await axios.get(api + "/listar-pedidos")
             .then((response) => {
                 console.log(response.data);
-                setData(response.data.pedidos);
+                setData(response.data.pedido);
             })
             .catch(() => {
                 setStatus({
@@ -44,7 +44,7 @@ export const Listar = () => {
 
                     <div className="m-auto p-2">
                         <Link to="/incluir-pedidos"
-                            className="btn btn-outline-primary btn-sm">CADASTRAR</Link>
+                            className="btn btn-outline-primary btn-sm">CADASTRAR NOVO PEDIDO</Link>
                     </div>
 
                     {status.type === 'error' ? <Alert color="danger">
@@ -68,7 +68,7 @@ export const Listar = () => {
                                 <td>{item.ClienteId}</td>
                                 <td>{item.nome}</td>
                                 <td className="text-center/">
-                                    <Link to={"/listar-pedido/" + item.id}
+                                    <Link to={"/listar-servicos/" + item.id}
                                         className="btn btn-outline-primary btn-sm">Consultar</Link>
                                 </td>
                             </tr>
